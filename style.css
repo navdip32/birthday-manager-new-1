@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(45deg,#ff0080,#ff8c00,#40e0d0);
+  background-size: 400% 400%;
+  animation: bgMove 10s infinite;
+  color: white;
+  overflow: hidden;
+}
+
+.dark {
+  background: black;
+}
+
+@keyframes bgMove {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: pop 1s ease forwards;
+}
+
+@keyframes pop {
+  from{transform:translate(-50%,-50%) scale(0);}
+  to{transform:translate(-50%,-50%) scale(1);}
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: yellow;
+}
+
+button:hover {
+  transform: scale(1.2) rotate(5deg);
+  background: red;
+  color: white;
+}
+
+.explode {
+  animation: spinOut 1s forwards;
+}
+
+@keyframes spinOut {
+  to{transform:scale(0) rotate(720deg); opacity:0;}
+}
+
+/* Breaking News */
+.breaking-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: red;
+  font-weight: bold;
+  padding: 10px;
+  animation: flash 0.6s infinite alternate;
+}
+
+@keyframes flash {
+  from{background:red;}
+  to{background:darkred;}
+}
+
+.news-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.trophy {
+  width: 350px;
+  animation: zoom 2s ease forwards;
+}
+
+@keyframes zoom {
+  from{transform:scale(0) rotate(-360deg);}
+  to{transform:scale(1) rotate(0);}
+}
+
+.reporter {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.ticker {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: yellow;
+  color: black;
+  overflow: hidden;
+}
+
+.ticker-text {
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  from{transform:translateX(0);}
+  to{transform:translateX(-100%);}
+}

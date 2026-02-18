@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manager Birthday Madness</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function nextPage() {
+      document.body.classList.add("explode");
+      setTimeout(() => {
+        window.location.href = "page2.html";
+      }, 900);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🚨 ATTENTION BOSS 🚨</h1>
+    <h2>Today is NOT a normal day...</h2>
+    <button onclick="nextPage()">Click If You're Brave 😎</button>
+  </div>
+</body>
+</html>
